@@ -62,7 +62,7 @@ const Carousel = () => {
     <div
       style={{ display: "flex", justifyContent: "center", marginTop: "100px" }}
     >
-      <Grid width={{ lg: "85%", sm: "90%", xs: "95%" }} height="auto">
+      <Grid width={{ lg: "85%", sm: "90%", xs: "100%" }} height="auto">
         <Box sx={{ display: "flex", borderRadius: "10px", boxShadow: "none" }}>
           <Box
             sx={{
@@ -148,7 +148,7 @@ const Carousel = () => {
           <Box
             height={{ xs: 240, sm: 550, md: 600, lg: 700 }}
             paddingLeft={{ xs: 0, lg: 10 }}
-            sx={{ justifyContent: "center", width: "40%" }}
+            sx={{ justifyContent: "center", width: "35%" }}
           >
             <Typography
               sx={{
@@ -163,13 +163,18 @@ const Carousel = () => {
             </Typography>
             <Box
               height={{ xs: 290, sm: 440, md: 500, lg: 580 }}
-              sx={{ overflow: "clip" }}
+              sx={{
+                overflowY: "scroll",
+                "&::-webkit-scrollbar": {
+                  display: "none",
+                },
+              }}
             >
               <Typography
                 sx={{
                   width: "100%",
                   padding: 2,
-                  overflow: "hidden",
+
                   height: "auto",
                   color: "grey",
                 }}
