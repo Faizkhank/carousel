@@ -23,11 +23,12 @@ const Carousel = () => {
       const slideInterval = setInterval(() => {
         handleNextClick();
       }, 3000);
-
+      /*Auto slide show 3sec*/
       return () => clearInterval(slideInterval);
     }
   }, [SlideAuto, activeIndex]);
   const handleNextClick = () => {
+    /*Slide Next*/
     const imageListEl = imageListRef.current;
     const itemWidth = imageListEl.scrollWidth / data.length;
     setActiveIndex((prevIndex) => {
@@ -41,6 +42,7 @@ const Carousel = () => {
     });
   };
   const handlePrevClick = () => {
+    /*Slide Prev*/
     const imageListEl = imageListRef.current;
     const itemWidth = imageListEl.scrollWidth / data.length;
     setActiveIndex((prevIndex) => {
