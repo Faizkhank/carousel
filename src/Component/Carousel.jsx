@@ -26,7 +26,7 @@ const Carousel = () => {
 
       return () => clearInterval(slideInterval);
     }
-  }, [SlideAuto, activeIndex, data.length, 3000]);
+  }, [SlideAuto, activeIndex]);
   const handleNextClick = () => {
     const imageListEl = imageListRef.current;
     const itemWidth = imageListEl.scrollWidth / data.length;
@@ -83,7 +83,7 @@ const Carousel = () => {
                 },
               }}
             >
-              <img src={data[activeIndex].Image} alt="image" />
+              <img src={data[activeIndex].Image} alt="image_wallpaper" />
             </Box>
             <Box sx={{ display: "flex", width: "100%" }}>
               <Button
@@ -127,7 +127,6 @@ const Carousel = () => {
                         margin: "5px",
                       }}
                       image={items.Image}
-                      alt="image"
                     />
                   </ImageListItem>
                 ))}
