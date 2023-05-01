@@ -18,6 +18,7 @@ const Carousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [SlideAuto, setSlideAuto] = useState(false);
   const imageListRef = useRef(null);
+
   useEffect(() => {
     if (SlideAuto) {
       const slideInterval = setInterval(() => {
@@ -99,6 +100,7 @@ const Carousel = () => {
               </Button>
               <ImageList
                 sx={{
+                  overflowX: "scroll",
                   gridAutoFlow: "column",
                   gridTemplateColumns:
                     "repeat(auto-fit, minmax(160px,1fr)) !important",
